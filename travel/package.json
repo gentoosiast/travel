@@ -1,0 +1,23 @@
+{
+  "name": "travel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --load-path=node_modules/normalize.css --watch sass/main.scss style.css"
+  },
+  "author": "Sergey Koksharov <gentoosiastic@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@linthtml/linthtml": "^0.8.6",
+    "linthtml-config-htmlacademy": "^1.0.3",
+    "prettier": "2.7.1",
+    "stylelint": "^14.9.1",
+    "stylelint-config-htmlacademy": "^0.1.12",
+    "stylelint-config-standard": "^26.0.0"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
+}
