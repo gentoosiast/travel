@@ -1,0 +1,43 @@
+.steps {
+  margin-top: 8rem;
+}
+
+.steps__title {
+  margin-bottom: 4rem; // pixel perfect
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  column-gap: 19.7rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1rem; // pixel perfect
+}
+
+// hack because middle icon with calendar in mockup is off center
+.cards > .card:nth-child(2) {
+  position: relative;
+  left: 34px;
+}
+
+.card__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 1.6rem;
+  background-color: $secondary-color;
+}
+
+.card__text {
+  font-family: $secondary-font;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  color: $main-color;
+}
