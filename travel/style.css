@@ -316,10 +316,18 @@ body {
   font-size: 1.6rem;
 }
 
+h1 {
+  margin-top: 0;
+  font-family: "Aleo", Cambria, "Hoefler Text", Utopia, "Liberation Serif", "Nimbus Roman No9 L Regular", Times, "Times New Roman", serif;
+  font-size: 8rem;
+  line-height: 9.6rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
 .button {
   padding: 10px 30px;
   border: none;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 3px rgba(13, 96, 111, 0.16);
   border-radius: 10px;
   font-size: 1.6rem;
   line-height: 2.1rem;
@@ -328,9 +336,20 @@ body {
   cursor: pointer;
 }
 
-.wrapper {
+.button-shadowed {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 3px rgba(13, 96, 111, 0.16);
+}
+
+.button_big {
+  padding: 1.35rem 3.25rem;
+  font-size: 2.4rem;
+  line-height: 3.175rem;
+}
+
+.bg-wrapper {
   max-width: 1440px;
-  margin: 0 auto;
+  margin: auto;
+  background: url("./img/header-bg.jpg");
 }
 
 .header .button {
@@ -341,7 +360,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding: 20px 0;
+  padding: 19px 0 18px;
   box-shadow: 0px 4px 4px rgba(13, 96, 111, 0.5);
   background-color: rgba(242, 120, 92, 0.7);
 }
@@ -386,6 +405,60 @@ body {
 
 .navigation > li:first-child .navigation__link {
   padding-left: 0;
+}
+
+.preview {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.preview__content {
+  width: 89.2rem;
+  margin-top: 3.2rem;
+  margin-left: 12rem;
+  padding-bottom: 25.4rem;
+}
+
+.preview__title {
+  margin: 0;
+}
+
+.preview__text {
+  margin: 3.2rem 0 4.5rem;
+  font-family: "Aleo", Cambria, "Hoefler Text", Utopia, "Liberation Serif", "Nimbus Roman No9 L Regular", Times, "Times New Roman", serif;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  font-weight: 700;
+  font-style: italic;
+  color: #ffffff;
+}
+
+.preview__form {
+  position: relative;
+}
+
+.form__input {
+  width: 88.8rem;
+  height: 9.4rem;
+  border: none;
+  border-radius: 16px;
+  font-size: 2.4rem;
+  line-height: 2.88rem;
+  font-style: italic;
+  text-indent: 4.1rem;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+.form__input:focus {
+  outline: 2px solid #f2785c;
+}
+.form__input::placeholder {
+  font-family: "Aleo", Cambria, "Hoefler Text", Utopia, "Liberation Serif", "Nimbus Roman No9 L Regular", Times, "Times New Roman", serif;
+  color: #f2785c;
+}
+
+.form__button {
+  position: absolute;
+  top: 2rem;
+  right: 1.8rem;
 }
 
 /*# sourceMappingURL=style.css.map */

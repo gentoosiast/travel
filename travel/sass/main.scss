@@ -4,9 +4,12 @@
 
 @import 'abstracts/variables';
 
+@import 'base/typography';
 @import 'base/base';
 @import 'components/button';
 
+@import 'layout/bg-wrapper';
 @import 'layout/wrapper';
 @import 'layout/header';
 @import 'layout/navigation';
+@import 'layout/preview';
