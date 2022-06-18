@@ -1,0 +1,17 @@
+.navigation {
+  display: flex;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.navigation__link {
+  padding-left: 42px;
+  font-size: 1.6rem;
+  line-height: 2.1rem;
+  text-decoration: none;
+  color: $light-color;
+}
+
+.navigation > li:first-child .navigation__link {
+  padding-left: 0;
+}
