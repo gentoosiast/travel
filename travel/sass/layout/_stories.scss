@@ -1,8 +1,9 @@
 .stories {
+  padding-bottom: 4.17rem;
   background: rgba($light-color, 0.7);
 }
 
-.story__articles {
+.stories__articles {
   margin: 8rem auto 4rem;
 }
 
@@ -11,6 +12,10 @@
   align-items: flex-start;
   gap: 4rem;
   margin-bottom: 3rem;
+
+  &:first-child {
+    margin-top: 2rem;
+  }
 }
 
 .story__image {

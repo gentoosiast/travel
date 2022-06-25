@@ -1,0 +1,48 @@
+.footer {
+  display: flex;
+  align-items: center;
+  padding: 1.3rem 0 1.1rem;
+}
+
+.footer__rsslogo {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  margin-right: auto;
+  @extend %smooth-transition;
+
+  &:hover {
+    filter: brightness(80%);
+  }
+}
+
+.footer__copyright {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  color: $light-color;
+}
+
+.footer__social {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0; // override user-agent style
+  margin-left: auto;
+  padding-left: 0; // override user-agent style
+  list-style-type: none;
+}
+
+.social__item {
+  margin-right: 2.05rem;
+  &:last-child {
+    margin-right: 0;
+  }
+  @extend %smooth-transition;
+
+  &:hover {
+    filter: brightness(80%);
+  }
+}

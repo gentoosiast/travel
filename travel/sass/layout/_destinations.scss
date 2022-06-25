@@ -10,13 +10,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
 }
 
 .carousel__slides {
   display: flex;
   justify-content: center;
   gap: 6rem;
-  overflow: hidden;
 }
 
 .carousel__slide {
