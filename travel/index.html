@@ -23,100 +23,226 @@
   <body>
     <div class="bg-wrapper">
       <header class="header">
-        <div class="wrapper header__wrapper">
+        <div class="content-wrapper header__wrapper">
           <div class="header__logo">
-            <a href="#" class="logo">
-              <object
-                class="logo__icon"
-                type="image/svg+xml"
-                data="./img/icons/logo.svg"
-              >
-                <!-- fallback -->
-                <img
-                  src="./img/icons/logo.png"
-                  alt="logo"
-                  width="30"
-                  height="30"
-                />
-              </object>
-              <span class="logo__text">Travel Portal</span>
+            <a href="javascript:;" class="logo">
+              <span class="logo__icon icon-logo"></span
+              ><span class="logo__text">Travel&nbsp;Portal</span>
             </a>
           </div>
           <nav class="header__navigation">
             <ul class="navigation">
-              <li><a href="#" class="navigation__link">How It Works</a></li>
-              <li><a href="#" class="navigation__link">Plan Your Trip</a></li>
-              <li><a href="#" class="navigation__link">Destinations</a></li>
-              <li><a href="#" class="navigation__link">Travel Stories</a></li>
+              <li>
+                <a href="#steps" class="navigation__link">How It Works</a>
+              </li>
+              <li>
+                <a href="#plan" class="navigation__link">Plan Your Trip</a>
+              </li>
+              <li>
+                <a href="#destinations" class="navigation__link"
+                  >Destinations</a
+                >
+              </li>
+              <li>
+                <a href="#stories" class="navigation__link">Travel Stories</a>
+              </li>
             </ul>
           </nav>
-          <button class="button button-shadowed">Login</button>
+          <button class="button button_small">Login</button>
         </div>
       </header>
       <main>
-        <section class="preview">
-          <div class="preview__content">
-            <h1 class="preview__title">Explore the beauty of the World</h1>
-            <p class="preview__text">
-              Receive personalized recommendations for countries, hotels,
-              activities and more
-            </p>
-            <form class="preview__form form" action="#" method="POST">
-              <input
-                class="form__input"
-                id="planning"
-                type="text"
-                placeholder="What would you like to do?"
-              />
-              <button class="button button_big form__button" type="submit">
-                Start Planning
-              </button>
-            </form>
-          </div>
+        <section class="preview" id="plan">
+          <h1 class="preview__title">Explore the beauty of the World</h1>
+          <p class="preview__text">
+            Receive personalized recommendations for countries, hotels,
+            activities and more
+          </p>
+          <form class="preview__form" action="javascript:;" method="POST">
+            <input
+              class="preview__input"
+              id="planning"
+              type="text"
+              placeholder="What would you like to do?"
+              autocomplete="off"
+            />
+            <button class="preview__button button button_big" type="submit">
+              Start Planning
+            </button>
+          </form>
         </section>
-        <section class="steps">
+        <section class="steps" id="steps">
           <h2 class="steps__title">3 steps to the perfect trip</h2>
           <div class="cards">
             <div class="card">
-              <div class="card__icon">
-                <object
-                  class="card__svg"
-                  type="image/svg+xml"
-                  data="./img/icons/bike.svg"
-                >
-                  <!-- fallback -->
-                </object>
-              </div>
+              <div class="card__icon"><span class="icon-bike"></span></div>
               <p class="card__text">Tell us what you want to do</p>
             </div>
             <div class="card">
-              <div class="card__icon">
-                <object
-                  class="card__svg"
-                  type="image/svg+xml"
-                  data="./img/icons/calendar.svg"
-                >
-                  <!-- fallback -->
-                </object>
-              </div>
+              <div class="card__icon"><span class="icon-calendar"></span></div>
               <p class="card__text">Share us preferable dates</p>
             </div>
             <div class="card">
-              <div class="card__icon">
-                <object
-                  class="card__svg"
-                  type="image/svg+xml"
-                  data="./img/icons/plane.svg"
-                >
-                  <!-- fallback -->
-                </object>
-              </div>
+              <div class="card__icon"><span class="icon-plane"></span></div>
               <p class="card__text">We will give you recommendations</p>
             </div>
           </div>
         </section>
-        <section class="destinations"></section>
-        <section class="stories"></section>
+        <section class="destinations" id="destinations">
+          <h2 class="destinations__title">Popular Destinations</h2>
+          <div class="carousel">
+            <div class="carousel__slides">
+              <div class="carousel__slide slide">
+                <img
+                  src="img/spain.jpg"
+                  width="800"
+                  height="800"
+                  alt="Spain photo"
+                  class="slide__image"
+                />
+                <p class="slide__text">Spain</p>
+              </div>
+              <div class="carousel__slide slide">
+                <img
+                  src="img/japan.jpg"
+                  width="800"
+                  height="800"
+                  alt="Japan photo"
+                  class="slide__image"
+                />
+                <p class="slide__text">Japan</p>
+              </div>
+              <div class="carousel__slide slide">
+                <img
+                  src="img/usa.jpg"
+                  width="800"
+                  height="800"
+                  alt="USA photo"
+                  class="slide__image"
+                />
+                <p class="slide__text">USA</p>
+              </div>
+            </div>
+            <div class="carousel__buttons">
+              <span class="circle-button"></span
+              ><!--
+              --><span class="circle-button circle-button_active"></span
+              ><!--
+              --><span class="circle-button"></span>
+            </div>
+          </div>
+          <button class="destinations__button button button_arrow">
+            <span class="icon-arrow"></span>Find More
+          </button>
+        </section>
+        <section class="stories" id="stories">
+          <h2 class="stories__title">Travel Stories</h2>
+          <div class="content-wrapper story__articles">
+            <article class="story">
+              <img
+                src="img/stories1.jpg"
+                alt="Thailand"
+                width="400"
+                height="250"
+                class="story__image"
+              />
+              <div class="story__content">
+                <h3 class="story__title">10 Photos of Attractive Thailand</h3>
+                <p class="story__text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                  irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                  cupidatat non proident, sunt in culpa qui officia deserunt
+                  mollit anim id est laborum.Lorem ipsum dolor sit amet,
+                  consectetur adipiscing elit. Lorem ipsum, dolor sit amet
+                  consectetur adipisicing elit. Rerum, quos.
+                </p>
+                <a href="javascript:;" class="story__link">Read More</a>
+              </div>
+            </article>
+            <article class="story">
+              <img
+                src="img/stories2.jpg"
+                alt="Canyonlands National Park, Utah"
+                width="400"
+                height="250"
+                class="story__image"
+              />
+              <div class="story__content">
+                <h3 class="story__title">Canyonlands National Park, Utah</h3>
+                <p class="story__text" lang="zxx">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                  irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                  cupidatat non proident, sunt in culpa qui officia deserunt
+                  mollit anim id est laborum.Lorem ipsum dolor sit amet,
+                  consectetur adipiscing elit. Lorem ipsum dolor sit, amet
+                  consectetur adipisicing elit. Non, similique!
+                </p>
+                <a href="javascript:;" class="story__link">Read More</a>
+              </div>
+            </article>
+            <article class="story">
+              <img
+                src="img/stories3.jpg"
+                alt="Mountains"
+                width="400"
+                height="250"
+                class="story__image"
+              />
+              <div class="story__content">
+                <h3 class="story__title">I left my heart in the Mountains!</h3>
+                <p class="story__text" lang="zxx">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                  irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                  cupidatat non proident, sunt in culpa qui officia deserunt
+                  mollit anim id est laborum.Lorem ipsum dolor sit amet,
+                  consectetur adipiscing elit. Lorem ipsum dolor sit amet
+                  consectetur adipisicing elit. Quaerat, a?
+                </p>
+                <a href="javascript:;" class="story__link">Read More</a>
+              </div>
+            </article>
+            <article class="story">
+              <img
+                src="img/stories4.jpg"
+                alt="Van on the road"
+                width="400"
+                height="250"
+                class="story__image"
+              />
+              <div class="story__content">
+                <h3 class="story__title">The Longest journey in my life!</h3>
+                <p class="story__text" lang="zxx">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                  irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                  cupidatat non proident, sunt in culpa qui officia deserunt
+                  mollit anim id est laborum.Lorem ipsum dolor sit amet,
+                  consectetur adipiscing elit Lorem ipsum, dolor sit amet
+                  consectetur adipisicing elit. Fuga, officia!
+                </p>
+                <a href="javascript:;" class="story__link">Read More</a>
+              </div>
+            </article>
+          </div>
+          <button class="stories__button button button_arrow">
+            <span class="icon-arrow"></span>See More
+          </button>
+        </section>
       </main>
       <footer></footer>
     </div>

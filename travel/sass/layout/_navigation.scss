@@ -1,17 +1,23 @@
 .navigation {
   display: flex;
-  padding-left: 0;
+  margin: 0; // redefine user-agent style
+  padding-left: 0; // redefine user-agent style
   list-style-type: none;
 }
 
 .navigation__link {
-  padding-left: 42px;
+  margin-left: 4.2rem;
+  border-bottom: 2px solid transparent;
   font-size: 1.6rem;
   line-height: 2.1rem;
   text-decoration: none;
   color: $light-color;
+  @extend %smooth-transition;
+  &:hover {
+    border-bottom: 2px solid $light-color;
+  }
 }
 
 .navigation > li:first-child .navigation__link {
-  padding-left: 0;
+  margin-left: 0;
 }

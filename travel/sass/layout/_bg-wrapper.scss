@@ -1,5 +1,8 @@
 .bg-wrapper {
-  max-width: 1440px;
+  max-width: $page-width;
   margin: auto;
-  background: no-repeat url('./img/header-bg.jpg');
+  background: url('./img/header-bg.jpg') top no-repeat;
+  // disable footer-bg for now, easier to position without it
+  // background: url('./img/header-bg.jpg') top no-repeat,
+  //   url('./img/footer-bg.jpg') bottom no-repeat;
 }

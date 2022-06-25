@@ -1,16 +1,23 @@
 @charset 'utf-8';
 
+/* stylelint-disable */
 @import 'normalize';
+/* stylelint-enable */
 
 @import 'abstracts/variables';
+@import 'abstracts/placeholders';
 
 @import 'base/typography';
 @import 'base/base';
+
 @import 'components/button';
+@import 'components/icon';
 
 @import 'layout/bg-wrapper';
-@import 'layout/wrapper';
+@import 'layout/content-wrapper';
 @import 'layout/header';
 @import 'layout/navigation';
 @import 'layout/preview';
 @import 'layout/steps';
+@import 'layout/destinations';
+@import 'layout/stories';
