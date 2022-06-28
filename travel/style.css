@@ -309,7 +309,7 @@ template {
 }
 
 /* stylelint-enable */
-.social__item, .footer__rsslogo, .story__link, .preview__input, .navigation__link, .circle-button, .button {
+.social__item, .footer__rsslogo, .story__link, .preview__input, .navigation__link, .header__logo, .circle-button, .button {
   transition: all 0.3s ease-in;
 }
 
@@ -498,6 +498,10 @@ h3 {
   justify-content: space-between;
   align-items: center;
   padding: 2.5rem 0 2.4rem;
+}
+
+.header__logo:hover {
+  filter: brightness(85%);
 }
 
 .logo {

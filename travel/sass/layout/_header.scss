@@ -10,6 +10,13 @@
   padding: 2.5rem 0 2.4rem;
 }
 
+.header__logo {
+  @extend %smooth-transition;
+  &:hover {
+    filter: brightness(85%);
+  }
+}
+
 .logo {
   text-decoration: none;
 }
