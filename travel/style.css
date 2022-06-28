@@ -758,6 +758,10 @@ h3 {
   filter: brightness(80%);
 }
 
+.rsslogo__icon {
+  max-height: 3.5rem;
+}
+
 .footer__copyright {
   flex: 1;
   display: flex;
