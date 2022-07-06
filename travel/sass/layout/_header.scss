@@ -1,6 +1,10 @@
 .header {
   background-color: rgba($secondary-color, 0.7);
   box-shadow: 0 4px 4px rgba(13, 96, 111, 0.5);
+  @include media-mobile {
+    background: linear-gradient(180deg, #0d606f 0%, rgba(13, 96, 111, 0) 65.1%);
+    box-shadow: none;
+  }
 }
 
 .header__wrapper {
@@ -8,6 +12,9 @@
   justify-content: space-between;
   align-items: center;
   padding: 2.5rem 0 2.4rem;
+  @include media-mobile {
+    padding: 4.5rem 0 2rem;
+  }
 }
 
 .header__logo {
@@ -31,8 +38,40 @@
   font-size: 3.2rem;
   line-height: 3.89rem;
   color: $light-color;
+  @include media-mobile {
+    display: none;
+  }
+}
+
+.header__burger {
+  display: none;
+  @include media-mobile {
+    display: block;
+    margin-right: 10px;
+    margin-bottom: 5px;
+  }
+}
+
+.header__menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: right 1s ease-in-out;
+}
+
+.header__menu_hidden {
+  right: -166px;
 }
 
 .header__navigation {
   margin-right: 3.2rem; // pixel-perfect
+  @include media-mobile {
+    display: none;
+  }
+}
+
+.header__button {
+  @include media-mobile {
+    display: none;
+  }
 }

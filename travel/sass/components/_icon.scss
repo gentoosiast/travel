@@ -12,6 +12,11 @@
   height: 45px;
   background-image: url('img/icons/bike.svg');
   background-repeat: no-repeat;
+  background-size: 100%;
+  @include media-mobile {
+    width: 35px;
+    height: 31.5px;
+  }
 }
 
 .icon-calendar {
@@ -20,6 +25,11 @@
   height: 52px;
   background-image: url('img/icons/calendar.svg');
   background-repeat: no-repeat;
+  background-size: 100%;
+  @include media-mobile {
+    width: 35px;
+    height: 35px;
+  }
 }
 
 .icon-plane {
@@ -28,6 +38,11 @@
   height: 45px;
   background-image: url('img/icons/plane.svg');
   background-repeat: no-repeat;
+  background-size: 100%;
+  @include media-mobile {
+    width: 40px;
+    height: 30px;
+  }
 }
 
 .icon-arrow {

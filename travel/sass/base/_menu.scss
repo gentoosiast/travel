@@ -1,0 +1,68 @@
+.fadeout-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0);
+  transition: background-color 1s ease-in-out;
+  pointer-events: none;
+}
+
+.fadeout-container_active {
+  background-color: rgba(0, 0, 0, 0.3);
+  pointer-events: all;
+}
+
+.menu__close {
+  position: absolute;
+  top: 14px;
+  left: 12px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.menu__cross {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  &::before,
+  &::after {
+    position: absolute;
+    content: '';
+    height: 18px;
+    width: 2px;
+    border-radius: 2px;
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+  &::before {
+    transform: rotate(45deg);
+  }
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.menu__items {
+  padding: 4.4rem 1.5rem 3rem 4.5rem;
+  border-radius: 10px;
+  margin: 0;
+  list-style-type: none;
+  text-align: right;
+  font-size: 1.6rem;
+  line-height: 2.12rem;
+  background-color: $secondary-color;
+  li {
+    padding-bottom: 1rem;
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+  a {
+    color: $light-color;
+    text-decoration: none;
+  }
+}

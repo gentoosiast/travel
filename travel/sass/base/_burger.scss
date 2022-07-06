@@ -1,0 +1,31 @@
+%burger-line {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  width: 100%;
+  height: 2.67px;
+  border-radius: 3px;
+  background-color: $light-color;
+}
+
+.burger {
+  position: relative;
+  width: 26.25px;
+  height: 16px;
+  cursor: pointer;
+  &::before {
+    @extend %burger-line;
+    top: 0;
+    left: 0;
+  }
+  &::after {
+    @extend %burger-line;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.burger__line {
+  @extend %burger-line;
+  top: calc(50% - 1.335px);
+}

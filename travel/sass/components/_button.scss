@@ -7,6 +7,10 @@
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25), 0 2px 3px rgba(13, 96, 111, 0.16);
   cursor: pointer;
   @extend %smooth-transition;
+  @include media-mobile {
+    box-shadow: 0 0 3px rgba(13, 96, 111, 0.08),
+      0 2px 3px rgba(13, 96, 111, 0.16);
+  }
   &:hover {
     background-color: mix(#ffffff, $main-color, 20%);
   }
@@ -24,6 +28,11 @@
   padding: 1.35rem 3.25rem;
   font-size: 2.4rem;
   line-height: 3.2rem;
+  @include media-mobile {
+    padding: 0.75rem 0.9rem;
+    font-size: 1.1rem;
+    line-height: 1.45rem;
+  }
 }
 
 .button_arrow {
@@ -32,6 +41,11 @@
   padding: 1.35rem 3.1rem 1.35rem 3.35rem;
   font-size: 2.4rem;
   line-height: 3.2rem;
+  @include media-mobile {
+    padding: 0.75rem 1.35rem;
+    font-size: 1.1rem;
+    line-height: 1.46rem;
+  }
 
   .icon-arrow {
     padding-right: 1.25rem;

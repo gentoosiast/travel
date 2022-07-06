@@ -3,4 +3,8 @@
   margin: auto;
   background: url('img/header-bg.jpg') top no-repeat,
     url('img/footer-bg.jpg') bottom no-repeat;
+  @include media-mobile {
+    background: url('img/header-bg-mobile.jpg') top no-repeat,
+      url('img/footer-bg-mobile.jpg') bottom no-repeat;
+  }
 }

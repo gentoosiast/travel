@@ -24,6 +24,10 @@ h2 {
   text-align: center;
   text-transform: uppercase;
   color: $secondary-color;
+  @include media-mobile {
+    font-size: 1.4rem;
+    line-height: 1.85rem;
+  }
 }
 
 h3 {

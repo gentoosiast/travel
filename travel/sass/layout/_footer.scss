@@ -10,6 +10,9 @@
   justify-content: flex-start;
   margin-right: auto;
   @extend %smooth-transition;
+  @include media-mobile {
+    display: none;
+  }
 
   &:hover {
     filter: brightness(80%);
@@ -26,6 +29,9 @@
   justify-content: center;
   margin: 0;
   color: $light-color;
+  @include media-mobile {
+    display: none;
+  }
 }
 
 .footer__social {
@@ -37,6 +43,9 @@
   margin-left: auto;
   padding-left: 0; // override user-agent style
   list-style-type: none;
+  @include media-mobile {
+    justify-content: center;
+  }
 }
 
 .social__item {

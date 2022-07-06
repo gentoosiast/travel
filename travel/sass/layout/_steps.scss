@@ -1,20 +1,63 @@
 .steps {
-  margin: 0 13.1rem 7.8rem;
+  margin-bottom: 9.6rem;
+  @include media-mobile {
+    margin-bottom: 2rem;
+  }
 }
 
 .steps__title {
   margin: 8.2rem 0 4rem; // pixel perfect
+  @include media-mobile {
+    margin: 8rem 0 2.15rem;
+  }
 }
 
 .cards {
   display: flex;
   justify-content: space-between;
+  margin: 0 1rem;
+  @include media-mobile {
+    margin: 0;
+  }
 }
 
 // hack because middle icon with calendar in mockup is off center
 .cards > .card:nth-child(2) {
   position: relative;
   left: 34px;
+  @include media-mobile {
+    position: inherit;
+    left: 0;
+  }
+}
+
+.card {
+  @include media-mobile {
+    flex: 1;
+  }
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.card:first-child {
+  @include media-mobile {
+    align-items: flex-start;
+    .card__text {
+      max-width: 9.5rem;
+      text-align: left;
+    }
+  }
+}
+
+.card:last-child {
+  @include media-mobile {
+    align-items: flex-end;
+    .card__text {
+      text-align: right;
+    }
+  }
 }
 
 .card__icon {
@@ -26,11 +69,23 @@
   height: 10rem;
   border-radius: 1.6rem;
   background-color: $secondary-color;
+  @include media-mobile {
+    margin: 0 0 2rem;
+    width: 7rem;
+    height: 7rem;
+  }
 }
 
 .card__text {
+  margin: 0;
   font-family: $secondary-font;
   font-size: 2rem;
   line-height: 2.4rem;
   color: $main-color;
+  text-align: center;
+  @include media-mobile {
+    font-size: 1rem;
+    line-height: 1.2rem;
+    // max-width: 9.5rem;
+  }
 }
