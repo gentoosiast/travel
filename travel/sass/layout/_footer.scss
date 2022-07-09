@@ -2,6 +2,9 @@
   display: flex;
   align-items: center;
   padding: 1.3rem 0 1.1rem;
+  @include media-mobile {
+    padding: 1.6rem 0 1.1rem;
+  }
 }
 
 .footer__rsslogo {
@@ -44,6 +47,7 @@
   padding-left: 0; // override user-agent style
   list-style-type: none;
   @include media-mobile {
+    margin-left: 10px;
     justify-content: center;
   }
 }
@@ -57,5 +61,11 @@
 
   &:hover {
     filter: brightness(80%);
+  }
+}
+
+.social__item:nth-child(2) {
+  @include media-mobile {
+    display: none;
   }
 }

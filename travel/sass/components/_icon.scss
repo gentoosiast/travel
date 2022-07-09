@@ -47,10 +47,16 @@
 
 .icon-arrow {
   display: inline-block;
-  width: 36px;
-  height: 23px;
+  width: 35px;
+  height: 22.5px;
   background-image: url('img/icons/button-arrow.svg');
   background-repeat: no-repeat;
+  // background-size: 100%;
+  background-size: contain;
+  @include media-mobile {
+    width: 8.75px;
+    height: 5.63px;
+  }
 }
 
 .icon-instagram {
@@ -83,5 +89,23 @@
   height: 33px;
   background-image: url('img/icons/github.svg');
   background-size: 34px 33px;
+  background-repeat: no-repeat;
+}
+
+.icon-arrow-prev {
+  display: inline-block;
+  width: 15px;
+  height: 26px;
+  background-image: url('img/icons/arrow-prev.svg');
+  background-size: 15px 26px;
+  background-repeat: no-repeat;
+}
+
+.icon-arrow-next {
+  display: inline-block;
+  width: 15px;
+  height: 26px;
+  background-image: url('img/icons/arrow-next.svg');
+  background-size: 15px 26px;
   background-repeat: no-repeat;
 }

@@ -118,34 +118,57 @@
           <h2 class="destinations__title">Popular Destinations</h2>
           <div class="carousel">
             <div class="carousel__slides">
+              <span class="carousel__prev icon-arrow-prev"></span>
+              <span class="carousel__next icon-arrow-next"></span>
               <div class="carousel__slide slide">
-                <img
-                  src="img/spain.jpg"
-                  width="800"
-                  height="800"
-                  alt="Spain photo"
-                  class="slide__image"
-                />
+                <picture>
+                  <source
+                    srcset="img/spain-mobile.jpg"
+                    media="(max-width: 391px)"
+                  />
+                  <source srcset="img/spain.jpg" />
+                  <img
+                    src="img/spain.jpg"
+                    width="800"
+                    height="800"
+                    alt="Spain photo"
+                    class="slide__image"
+                  />
+                </picture>
                 <p class="slide__text">Spain</p>
               </div>
               <div class="carousel__slide slide">
-                <img
-                  src="img/japan.jpg"
-                  width="800"
-                  height="800"
-                  alt="Japan photo"
-                  class="slide__image"
-                />
+                <picture>
+                  <source
+                    srcset="img/japan-mobile.jpg"
+                    media="(max-width: 391px)"
+                  />
+                  <source srcset="img/japan.jpg" />
+                  <img
+                    src="img/japan.jpg"
+                    width="800"
+                    height="800"
+                    alt="Japan photo"
+                    class="slide__image"
+                  />
+                </picture>
                 <p class="slide__text">Japan</p>
               </div>
               <div class="carousel__slide slide">
-                <img
-                  src="img/usa.jpg"
-                  width="800"
-                  height="800"
-                  alt="USA photo"
-                  class="slide__image"
-                />
+                <picture>
+                  <source
+                    srcset="img/usa-mobile.jpg"
+                    media="(max-width: 391px)"
+                  />
+                  <source srcset="img/usa.jpg" />
+                  <img
+                    src="img/usa.jpg"
+                    width="800"
+                    height="800"
+                    alt="USA photo"
+                    class="slide__image"
+                  />
+                </picture>
                 <p class="slide__text">USA</p>
               </div>
             </div>
@@ -165,13 +188,20 @@
           <h2 class="stories__title">Travel Stories</h2>
           <div class="content-wrapper stories__articles">
             <article class="story">
-              <img
-                src="img/stories1.jpg"
-                alt="Thailand"
-                width="400"
-                height="250"
-                class="story__image"
-              />
+              <picture class="story__picture">
+                <source
+                  srcset="img/stories1-mobile.jpg"
+                  media="(max-width: 391px)"
+                />
+                <source srcset="img/stories1.jpg" />
+                <img
+                  class="story__image"
+                  src="img/stories1.jpg"
+                  alt="Thailand"
+                  width="400"
+                  height="250"
+                />
+              </picture>
               <div class="story__content">
                 <h3 class="story__title">10 Photos of Attractive Thailand</h3>
                 <p class="story__text">
@@ -190,13 +220,20 @@
               </div>
             </article>
             <article class="story">
-              <img
-                src="img/stories2.jpg"
-                alt="Canyonlands National Park, Utah"
-                width="400"
-                height="250"
-                class="story__image"
-              />
+              <picture class="story__picture">
+                <source
+                  srcset="img/stories2-mobile.jpg"
+                  media="(max-width: 391px)"
+                />
+                <source srcset="img/stories2.jpg" />
+                <img
+                  class="story__image"
+                  src="img/stories2.jpg"
+                  alt="Canyonlands National Park, Utah"
+                  width="400"
+                  height="250"
+                />
+              </picture>
               <div class="story__content">
                 <h3 class="story__title">Canyonlands National Park, Utah</h3>
                 <p class="story__text" lang="zxx">
@@ -215,13 +252,20 @@
               </div>
             </article>
             <article class="story">
-              <img
-                src="img/stories3.jpg"
-                alt="Mountains"
-                width="400"
-                height="250"
-                class="story__image"
-              />
+              <picture class="story__picture">
+                <source
+                  srcset="img/stories3-mobile.jpg"
+                  media="(max-width: 391px)"
+                />
+                <source srcset="img/stories3.jpg" />
+                <img
+                  class="story__image"
+                  src="img/stories3.jpg"
+                  alt="Mountains"
+                  width="400"
+                  height="250"
+                />
+              </picture>
               <div class="story__content">
                 <h3 class="story__title">I left my heart in the Mountains!</h3>
                 <p class="story__text" lang="zxx">
@@ -240,13 +284,20 @@
               </div>
             </article>
             <article class="story">
-              <img
-                src="img/stories4.jpg"
-                alt="Van on the road"
-                width="400"
-                height="250"
-                class="story__image"
-              />
+              <picture class="story__picture">
+                <source
+                  srcset="img/stories4-mobile.jpg"
+                  media="(max-width: 391px)"
+                />
+                <source srcset="img/stories4.jpg" />
+                <img
+                  class="story__image"
+                  src="img/stories4.jpg"
+                  alt="Van on the road"
+                  width="400"
+                  height="250"
+                />
+              </picture>
               <div class="story__content">
                 <h3 class="story__title">The Longest journey in my life!</h3>
                 <p class="story__text" lang="zxx">
