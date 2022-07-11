@@ -29,6 +29,7 @@
   display: inline-block;
   width: 18px;
   height: 18px;
+  @extend %smooth-transition;
   &::before,
   &::after {
     position: absolute;
@@ -43,6 +44,9 @@
   }
   &::after {
     transform: rotate(-45deg);
+  }
+  &:hover {
+    filter: brightness(85%);
   }
 }
 
@@ -64,5 +68,9 @@
   a {
     color: $light-color;
     text-decoration: none;
+    @extend %smooth-transition;
+    &:hover {
+      filter: brightness(85%);
+    }
   }
 }

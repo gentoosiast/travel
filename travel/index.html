@@ -27,12 +27,12 @@
           <div class="header__logo">
             <a href="javascript:;" class="logo">
               <span class="logo__icon icon-logo"></span
-              ><span class="logo__text">Travel&nbsp;Portal</span>
+              ><span class="logo__text">Travel Portal</span>
             </a>
           </div>
-          <span class="header__burger burger" id="burger">
+          <div class="header__burger burger" id="burger">
             <span class="burger__line"></span>
-          </span>
+          </div>
           <div class="fadeout-container">
             <div class="header__menu header__menu_hidden menu" id="menu">
               <button class="menu__close" type="button" aria-label="Close">
@@ -70,7 +70,9 @@
               </li>
             </ul>
           </nav>
-          <button class="header__button button button_small">Login</button>
+          <button class="header__button button button_small" type="button">
+            Login
+          </button>
         </div>
       </header>
       <main>
@@ -117,9 +119,13 @@
         <section class="destinations" id="destinations">
           <h2 class="destinations__title">Popular Destinations</h2>
           <div class="carousel">
+            <span
+              class="carousel__arrow carousel__arrow_prev carousel__arrow_disabled icon-arrow-prev"
+            ></span>
+            <span
+              class="carousel__arrow carousel__arrow_next icon-arrow-next"
+            ></span>
             <div class="carousel__slides">
-              <span class="carousel__prev icon-arrow-prev"></span>
-              <span class="carousel__next icon-arrow-next"></span>
               <div class="carousel__slide slide">
                 <picture>
                   <source
@@ -137,7 +143,7 @@
                 </picture>
                 <p class="slide__text">Spain</p>
               </div>
-              <div class="carousel__slide slide">
+              <div class="carousel__slide slide slide_active">
                 <picture>
                   <source
                     srcset="img/japan-mobile.jpg"
@@ -180,7 +186,10 @@
               --><span class="circle-button"></span>
             </div>
           </div>
-          <button class="destinations__button button button_arrow">
+          <button
+            class="destinations__button button button_arrow"
+            type="button"
+          >
             <span class="icon-arrow"></span>Find More
           </button>
         </section>
@@ -316,7 +325,7 @@
               </div>
             </article>
           </div>
-          <button class="stories__button button button_arrow">
+          <button class="stories__button button button_arrow" type="button">
             <span class="icon-arrow"></span>See More
           </button>
         </section>
@@ -326,27 +335,37 @@
           ><img
             class="rsslogo__icon"
             src="img/rs_school_js.svg"
+            width="553"
+            height="206"
             alt="Rolling Scopes School logo"
         /></a>
         <p class="footer__copyright">All Rights Reserved © Travel Portal</p>
         <ul class="footer__social social">
           <li class="social__item">
-            <a href="https://github.com/gentoosiast/"
+            <a
+              href="https://github.com/gentoosiast/"
+              aria-label="Developer's GitHub account"
               ><span class="icon-github"></span
             ></a>
           </li>
           <li class="social__item">
-            <a href="https://www.instagram.com/rsschool_news/"
+            <a
+              href="https://www.instagram.com/rsschool_news/"
+              aria-label="Rolling Scopes School Instagram account"
               ><span class="icon-instagram"></span
             ></a>
           </li>
           <li class="social__item">
-            <a href="https://www.youtube.com/c/RollingScopesSchool"
+            <a
+              href="https://www.youtube.com/c/RollingScopesSchool"
+              aria-label="Rolling Scopes School YouTube account"
               ><span class="icon-youtube"></span
             ></a>
           </li>
           <li class="social__item">
-            <a href="https://twitter.com/rollingscopes"
+            <a
+              href="https://twitter.com/rollingscopes"
+              aria-label="Rolling Scopes School Twitter account"
               ><span class="icon-twitter"></span
             ></a>
           </li>
@@ -355,5 +374,6 @@
     </div>
     <script src="selfcheck.js"></script>
     <script src="burger-menu.js"></script>
+    <script src="slider.js"></script>
   </body>
 </html>

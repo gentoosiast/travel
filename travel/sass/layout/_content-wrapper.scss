@@ -1,7 +1,11 @@
 .content-wrapper {
   max-width: $content-width;
   margin: auto;
+  @media (max-width: 1221px) {
+    padding: 0 10px;
+  }
   @include media-mobile {
     max-width: $content-mobile-width;
+    padding: 0;
   }
 }

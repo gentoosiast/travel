@@ -11,7 +11,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2.5rem 0 2.4rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2.4rem;
   @include media-mobile {
     padding: 4.5rem 0 2rem;
   }
@@ -45,10 +46,14 @@
 
 .header__burger {
   display: none;
+  @extend %smooth-transition;
   @include media-mobile {
     display: block;
-    margin-right: 10px;
-    margin-bottom: 5px;
+    padding-bottom: 2px;
+    margin-right: 4px; // pixel-perfect
+    &:hover {
+      filter: brightness(85%);
+    }
   }
 }
 
@@ -64,7 +69,6 @@
 }
 
 .header__navigation {
-  margin-right: 3.2rem; // pixel-perfect
   @include media-mobile {
     display: none;
   }

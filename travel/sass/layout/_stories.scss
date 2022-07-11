@@ -39,12 +39,16 @@
 }
 
 .story__image {
-  max-width: 400px;
   border-radius: 16px;
   filter: drop-shadow(0 4px 4px $main-color);
   @include media-mobile {
     max-width: 155px;
   }
+}
+
+.story__content {
+  flex-shrink: 2;
+  max-width: 760px;
 }
 
 .story__title {
@@ -94,7 +98,12 @@
 .stories__button {
   padding-right: 4rem; // pixel-perfect
   margin: 0 auto;
+  @include media-tablet {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
   @include media-mobile {
+    padding-left: 1.35rem;
     padding-right: 1.35rem;
   }
 }

@@ -20,43 +20,68 @@
   overflow: hidden;
 }
 
-.carousel__slides {
-  // position: relative;
-  font-size: 0; // whitespace in HTML source adds vertical space
-  width: 4000px;
-  display: flex;
-  justify-content: center;
-  gap: 6rem;
-}
-
-.carousel__prev {
+.carousel__arrow {
   display: none;
+  @extend %smooth-transition;
   @include media-mobile {
     display: inline-block;
     z-index: 1;
     position: absolute;
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.2);
+    }
+    &_disabled {
+      filter: opacity(0.5);
+      cursor: default;
+      &:hover {
+        transform: none;
+      }
+    }
+  }
+}
+
+.carousel__arrow_prev {
+  @include media-mobile {
     top: calc(50% - 13px); // 50% - half of the icon width
     // margin (15px) + padding from the slide's edge (11.27px)
     left: calc(15px + 11.27px);
   }
 }
 
-.carousel__next {
-  display: none;
+.carousel__arrow_next {
   @include media-mobile {
-    display: inline-block;
-    z-index: 1;
-    position: absolute;
     top: calc(50% - 13px);
     right: calc(15px + 11.27px);
+  }
+}
+.carousel__slides {
+  font-size: 0; // whitespace in HTML source adds vertical space
+  width: 175%;
+  display: flex;
+  justify-content: center;
+  gap: 6rem;
+  @include media-mobile {
+    width: 350%;
+    // manual switch of current slide
+    // (temporary hack to achieve perfect similarity with mockup)
+    transform: translateX(calc(6rem + 92vw));
   }
 }
 
 .carousel__slide {
   position: relative;
+  @extend %smooth-transition;
   img {
     width: 100%;
+    @include media-mobile {
+      width: 92vw;
+    }
     border-radius: 16px;
+  }
+  &:not(.slide_active):hover {
+    filter: brightness(120%);
+    cursor: pointer;
   }
 }
 

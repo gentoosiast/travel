@@ -1,31 +1,31 @@
 %burger-line {
   content: '';
   position: absolute;
-  display: inline-block;
-  width: 100%;
-  height: 2.67px;
-  border-radius: 3px;
+  display: block;
+  width: 26.25px;
+  height: 2.8px;
+  border-radius: 2px;
   background-color: $light-color;
 }
 
 .burger {
   position: relative;
-  width: 26.25px;
-  height: 16px;
+  width: 35px;
+  height: 32px;
   cursor: pointer;
+  .burger__line {
+    @extend %burger-line;
+    top: calc(50% - 4px);
+    left: 4.38px;
+  }
   &::before {
     @extend %burger-line;
-    top: 0;
-    left: 0;
+    top: 6px;
+    left: 4.38px;
   }
   &::after {
     @extend %burger-line;
-    bottom: 0;
-    left: 0;
+    bottom: 11px;
+    left: 4.38px;
   }
-}
-
-.burger__line {
-  @extend %burger-line;
-  top: calc(50% - 1.335px);
 }
