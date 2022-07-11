@@ -4,6 +4,7 @@
   height: 30px;
   background-image: url('img/icons/logo.svg');
   background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .icon-bike {
@@ -12,6 +13,11 @@
   height: 45px;
   background-image: url('img/icons/bike.svg');
   background-repeat: no-repeat;
+  background-size: contain;
+  @include media-mobile {
+    width: 35px;
+    height: 31.5px;
+  }
 }
 
 .icon-calendar {
@@ -20,6 +26,11 @@
   height: 52px;
   background-image: url('img/icons/calendar.svg');
   background-repeat: no-repeat;
+  background-size: contain;
+  @include media-mobile {
+    width: 35px;
+    height: 35px;
+  }
 }
 
 .icon-plane {
@@ -28,14 +39,28 @@
   height: 45px;
   background-image: url('img/icons/plane.svg');
   background-repeat: no-repeat;
+  background-size: contain;
+  @include media-mobile {
+    width: 40px;
+    height: 30px;
+  }
 }
 
 .icon-arrow {
   display: inline-block;
-  width: 36px;
-  height: 23px;
+  width: 35px;
+  height: 22.5px;
   background-image: url('img/icons/button-arrow.svg');
   background-repeat: no-repeat;
+  background-size: contain;
+  @include media-tablet {
+    width: 20px;
+    height: 12.86px;
+  }
+  @include media-mobile {
+    width: 8.75px;
+    height: 5.63px;
+  }
 }
 
 .icon-instagram {
@@ -44,6 +69,7 @@
   height: 32px;
   background-image: url('img/icons/instagram.svg');
   background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .icon-youtube {
@@ -52,6 +78,7 @@
   height: 28px;
   background-image: url('img/icons/youtube.svg');
   background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .icon-twitter {
@@ -60,6 +87,7 @@
   height: 34px;
   background-image: url('img/icons/twitter.svg');
   background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .icon-github {
@@ -67,6 +95,24 @@
   width: 34px;
   height: 33px;
   background-image: url('img/icons/github.svg');
-  background-size: 34px 33px;
   background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.icon-arrow-prev {
+  display: inline-block;
+  width: 15px;
+  height: 26px;
+  background-image: url('img/icons/arrow-prev.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.icon-arrow-next {
+  display: inline-block;
+  width: 15px;
+  height: 26px;
+  background-image: url('img/icons/arrow-next.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
 }

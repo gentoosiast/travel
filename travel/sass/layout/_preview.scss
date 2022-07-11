@@ -1,11 +1,35 @@
 .preview {
+  padding-bottom: 25.2rem;
+  @include media-mobile {
+    padding-bottom: 0;
+  }
+}
+
+.preview__content {
+  display: flex;
+  flex-direction: column;
   max-width: 89.2rem;
-  margin-left: 12rem;
-  padding-bottom: 25.4rem;
+  @include media-mobile {
+    padding-top: 4.4rem;
+  }
+}
+
+.preview__logo {
+  display: none;
+  @include media-mobile {
+    display: block;
+  }
 }
 
 .preview__title {
-  margin: 3.2rem 0;
+  margin: 3.2rem 0 1.4rem;
+  @include media-tablet {
+    font-size: 5rem;
+    line-height: 7rem;
+  }
+  @include media-mobile {
+    display: none;
+  }
 }
 
 .preview__text {
@@ -16,6 +40,9 @@
   font-weight: 700;
   font-style: italic;
   color: $light-color;
+  @include media-mobile {
+    display: none;
+  }
 }
 
 .preview__form {
@@ -25,10 +52,16 @@
   height: 9.5rem;
   border-radius: 16px;
   background-color: rgba($light-color, 0.7);
+  @include media-tablet {
+    height: 6rem;
+  }
+  @include media-mobile {
+    height: 4.8rem;
+  }
 }
 
 .preview__input {
-  width: 56rem;
+  flex-basis: 56rem;
   margin-left: 4.1rem;
   border: none;
   font-family: $secondary-font;
@@ -39,6 +72,17 @@
   background-color: transparent;
   outline: none;
   @extend %smooth-transition;
+  @include media-tablet {
+    margin-left: 1.66rem;
+    font-size: 1.7rem;
+    line-height: 2rem;
+  }
+  @include media-mobile {
+    flex-basis: 22.6rem;
+    margin-left: 1.5rem;
+    font-size: 1.4rem;
+    line-height: 1.68rem;
+  }
 
   &::placeholder {
     color: $secondary-color;
@@ -47,4 +91,10 @@
 
 .preview__button {
   margin-right: 1.8rem;
+  @include media-tablet {
+    margin-right: 0.9rem;
+  }
+  @include media-mobile {
+    margin-right: 0.9rem;
+  }
 }

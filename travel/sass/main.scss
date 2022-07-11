@@ -6,9 +6,12 @@
 
 @import 'abstracts/variables';
 @import 'abstracts/placeholders';
+@import 'abstracts/mixins';
 
 @import 'base/typography';
 @import 'base/base';
+@import 'base/burger';
+@import 'base/menu';
 
 @import 'components/button';
 @import 'components/icon';

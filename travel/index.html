@@ -23,12 +23,34 @@
   <body>
     <div class="bg-wrapper">
       <header class="header">
-        <div class="content-wrapper header__wrapper">
+        <div class="header__wrapper content-wrapper">
           <div class="header__logo">
             <a href="javascript:;" class="logo">
               <span class="logo__icon icon-logo"></span
-              ><span class="logo__text">Travel&nbsp;Portal</span>
+              ><span class="logo__text">Travel Portal</span>
             </a>
+          </div>
+          <div class="header__burger burger" id="burger">
+            <span class="burger__line"></span>
+          </div>
+          <div class="fadeout-container">
+            <div class="header__menu header__menu_hidden menu" id="menu">
+              <button class="menu__close" type="button" aria-label="Close">
+                <span class="menu__cross" aria-hidden="true"></span>
+              </button>
+              <ul class="menu__items">
+                <li><a class="menu__link" href="#steps">How It Works</a></li>
+                <li><a class="menu__link" href="#plan">Plan Your Trip</a></li>
+                <li>
+                  <a class="menu__link" href="#destinations">Destinations</a>
+                </li>
+                <li>
+                  <a class="menu__link" href="#stories">Travel Stories</a>
+                </li>
+                <li><a class="menu__link" href="#">Account</a></li>
+                <li><a class="menu__link" href="#social">Social Media</a></li>
+              </ul>
+            </div>
           </div>
           <nav class="header__navigation">
             <ul class="navigation">
@@ -48,30 +70,36 @@
               </li>
             </ul>
           </nav>
-          <button class="button button_small">Login</button>
+          <button class="header__button button button_small" type="button">
+            Login
+          </button>
         </div>
       </header>
       <main>
         <section class="preview" id="plan">
-          <h1 class="preview__title">Explore the beauty of the World</h1>
-          <p class="preview__text">
-            Receive personalized recommendations for countries, hotels,
-            activities and more
-          </p>
-          <form class="preview__form" action="javascript:;" method="POST">
-            <input
-              class="preview__input"
-              id="planning"
-              type="text"
-              placeholder="What would you like to do?"
-              autocomplete="off"
-            />
-            <button class="preview__button button button_big" type="submit">
-              Start Planning
-            </button>
-          </form>
+          <div class="content-wrapper">
+            <div class="preview__content">
+              <h1 class="preview__title">Explore the beauty of the World</h1>
+              <p class="preview__text">
+                Receive personalized recommendations for countries, hotels,
+                activities and more
+              </p>
+              <form class="preview__form" action="javascript:;" method="POST">
+                <input
+                  class="preview__input"
+                  id="planning"
+                  type="text"
+                  placeholder="What would you like to do?"
+                  autocomplete="off"
+                />
+                <button class="preview__button button button_big" type="submit">
+                  Start Planning
+                </button>
+              </form>
+            </div>
+          </div>
         </section>
-        <section class="steps" id="steps">
+        <section class="steps content-wrapper" id="steps">
           <h2 class="steps__title">3 steps to the perfect trip</h2>
           <div class="cards">
             <div class="card">
@@ -91,35 +119,62 @@
         <section class="destinations" id="destinations">
           <h2 class="destinations__title">Popular Destinations</h2>
           <div class="carousel">
+            <span
+              class="carousel__arrow carousel__arrow_prev carousel__arrow_disabled icon-arrow-prev"
+            ></span>
+            <span
+              class="carousel__arrow carousel__arrow_next icon-arrow-next"
+            ></span>
             <div class="carousel__slides">
               <div class="carousel__slide slide">
-                <img
-                  src="img/spain.jpg"
-                  width="800"
-                  height="800"
-                  alt="Spain photo"
-                  class="slide__image"
-                />
+                <picture>
+                  <source
+                    srcset="img/spain-mobile.jpg"
+                    media="(max-width: 391px)"
+                  />
+                  <source srcset="img/spain.jpg" />
+                  <img
+                    src="img/spain.jpg"
+                    width="800"
+                    height="800"
+                    alt="Spain photo"
+                    class="slide__image"
+                  />
+                </picture>
                 <p class="slide__text">Spain</p>
               </div>
-              <div class="carousel__slide slide">
-                <img
-                  src="img/japan.jpg"
-                  width="800"
-                  height="800"
-                  alt="Japan photo"
-                  class="slide__image"
-                />
+              <div class="carousel__slide slide slide_active">
+                <picture>
+                  <source
+                    srcset="img/japan-mobile.jpg"
+                    media="(max-width: 391px)"
+                  />
+                  <source srcset="img/japan.jpg" />
+                  <img
+                    src="img/japan.jpg"
+                    width="800"
+                    height="800"
+                    alt="Japan photo"
+                    class="slide__image"
+                  />
+                </picture>
                 <p class="slide__text">Japan</p>
               </div>
               <div class="carousel__slide slide">
-                <img
-                  src="img/usa.jpg"
-                  width="800"
-                  height="800"
-                  alt="USA photo"
-                  class="slide__image"
-                />
+                <picture>
+                  <source
+                    srcset="img/usa-mobile.jpg"
+                    media="(max-width: 391px)"
+                  />
+                  <source srcset="img/usa.jpg" />
+                  <img
+                    src="img/usa.jpg"
+                    width="800"
+                    height="800"
+                    alt="USA photo"
+                    class="slide__image"
+                  />
+                </picture>
                 <p class="slide__text">USA</p>
               </div>
             </div>
@@ -131,7 +186,10 @@
               --><span class="circle-button"></span>
             </div>
           </div>
-          <button class="destinations__button button button_arrow">
+          <button
+            class="destinations__button button button_arrow"
+            type="button"
+          >
             <span class="icon-arrow"></span>Find More
           </button>
         </section>
@@ -139,13 +197,20 @@
           <h2 class="stories__title">Travel Stories</h2>
           <div class="content-wrapper stories__articles">
             <article class="story">
-              <img
-                src="img/stories1.jpg"
-                alt="Thailand"
-                width="400"
-                height="250"
-                class="story__image"
-              />
+              <picture class="story__picture">
+                <source
+                  srcset="img/stories1-mobile.jpg"
+                  media="(max-width: 391px)"
+                />
+                <source srcset="img/stories1.jpg" />
+                <img
+                  class="story__image"
+                  src="img/stories1.jpg"
+                  alt="Thailand"
+                  width="400"
+                  height="250"
+                />
+              </picture>
               <div class="story__content">
                 <h3 class="story__title">10 Photos of Attractive Thailand</h3>
                 <p class="story__text">
@@ -164,13 +229,20 @@
               </div>
             </article>
             <article class="story">
-              <img
-                src="img/stories2.jpg"
-                alt="Canyonlands National Park, Utah"
-                width="400"
-                height="250"
-                class="story__image"
-              />
+              <picture class="story__picture">
+                <source
+                  srcset="img/stories2-mobile.jpg"
+                  media="(max-width: 391px)"
+                />
+                <source srcset="img/stories2.jpg" />
+                <img
+                  class="story__image"
+                  src="img/stories2.jpg"
+                  alt="Canyonlands National Park, Utah"
+                  width="400"
+                  height="250"
+                />
+              </picture>
               <div class="story__content">
                 <h3 class="story__title">Canyonlands National Park, Utah</h3>
                 <p class="story__text" lang="zxx">
@@ -189,13 +261,20 @@
               </div>
             </article>
             <article class="story">
-              <img
-                src="img/stories3.jpg"
-                alt="Mountains"
-                width="400"
-                height="250"
-                class="story__image"
-              />
+              <picture class="story__picture">
+                <source
+                  srcset="img/stories3-mobile.jpg"
+                  media="(max-width: 391px)"
+                />
+                <source srcset="img/stories3.jpg" />
+                <img
+                  class="story__image"
+                  src="img/stories3.jpg"
+                  alt="Mountains"
+                  width="400"
+                  height="250"
+                />
+              </picture>
               <div class="story__content">
                 <h3 class="story__title">I left my heart in the Mountains!</h3>
                 <p class="story__text" lang="zxx">
@@ -214,13 +293,20 @@
               </div>
             </article>
             <article class="story">
-              <img
-                src="img/stories4.jpg"
-                alt="Van on the road"
-                width="400"
-                height="250"
-                class="story__image"
-              />
+              <picture class="story__picture">
+                <source
+                  srcset="img/stories4-mobile.jpg"
+                  media="(max-width: 391px)"
+                />
+                <source srcset="img/stories4.jpg" />
+                <img
+                  class="story__image"
+                  src="img/stories4.jpg"
+                  alt="Van on the road"
+                  width="400"
+                  height="250"
+                />
+              </picture>
               <div class="story__content">
                 <h3 class="story__title">The Longest journey in my life!</h3>
                 <p class="story__text" lang="zxx">
@@ -239,37 +325,47 @@
               </div>
             </article>
           </div>
-          <button class="stories__button button button_arrow">
+          <button class="stories__button button button_arrow" type="button">
             <span class="icon-arrow"></span>See More
           </button>
         </section>
       </main>
-      <footer class="footer content-wrapper">
+      <footer class="footer content-wrapper" id="social">
         <a href="https://rs.school/js-stage0/" class="footer__rsslogo rsslogo"
           ><img
             class="rsslogo__icon"
             src="img/rs_school_js.svg"
+            width="553"
+            height="206"
             alt="Rolling Scopes School logo"
         /></a>
         <p class="footer__copyright">All Rights Reserved © Travel Portal</p>
         <ul class="footer__social social">
           <li class="social__item">
-            <a href="https://github.com/gentoosiast/"
+            <a
+              href="https://github.com/gentoosiast/"
+              aria-label="Developer's GitHub account"
               ><span class="icon-github"></span
             ></a>
           </li>
           <li class="social__item">
-            <a href="https://www.instagram.com/rsschool_news/"
+            <a
+              href="https://www.instagram.com/rsschool_news/"
+              aria-label="Rolling Scopes School Instagram account"
               ><span class="icon-instagram"></span
             ></a>
           </li>
           <li class="social__item">
-            <a href="https://www.youtube.com/c/RollingScopesSchool"
+            <a
+              href="https://www.youtube.com/c/RollingScopesSchool"
+              aria-label="Rolling Scopes School YouTube account"
               ><span class="icon-youtube"></span
             ></a>
           </li>
           <li class="social__item">
-            <a href="https://twitter.com/rollingscopes"
+            <a
+              href="https://twitter.com/rollingscopes"
+              aria-label="Rolling Scopes School Twitter account"
               ><span class="icon-twitter"></span
             ></a>
           </li>
@@ -277,5 +373,7 @@
       </footer>
     </div>
     <script src="selfcheck.js"></script>
+    <script src="burger-menu.js"></script>
+    <script src="slider.js"></script>
   </body>
 </html>

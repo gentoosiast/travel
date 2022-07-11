@@ -1,10 +1,25 @@
 .stories {
   padding-bottom: 4.17rem;
   background: rgba($light-color, 0.7);
+  @include media-mobile {
+    padding-bottom: 1.3rem;
+  }
+}
+
+.stories__title {
+  margin-bottom: 4rem;
+  @include media-mobile {
+    margin-bottom: 1rem;
+  }
 }
 
 .stories__articles {
-  margin: 8rem auto 4rem;
+  padding-top: 4rem;
+  margin: 0 auto 4rem;
+  @include media-mobile {
+    padding-top: 1rem;
+    margin: 0 auto 1rem;
+  }
 }
 
 .story {
@@ -12,19 +27,38 @@
   align-items: flex-start;
   gap: 4rem;
   margin-bottom: 3rem;
-
-  &:first-child {
-    margin-top: 2rem;
+  font-size: 0; // whitespace in HTML source adds vertical space
+  &:last-child {
+    margin-bottom: 0;
+  }
+  @include media-mobile {
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
   }
 }
 
 .story__image {
   border-radius: 16px;
   filter: drop-shadow(0 4px 4px $main-color);
+  @include media-mobile {
+    max-width: 155px;
+  }
+}
+
+.story__content {
+  flex-shrink: 2;
+  max-width: 760px;
 }
 
 .story__title {
   margin: 0 0 2.4rem;
+  @include media-mobile {
+    margin: 0 0 1rem;
+    font-size: 1.1rem;
+    line-height: 1.3rem;
+    font-weight: 700;
+  }
 }
 
 .story__text,
@@ -34,6 +68,10 @@
   line-height: 2.4rem;
   font-weight: 400;
   color: $main-color;
+  @include media-mobile {
+    font-size: 0.9rem;
+    line-height: 1.1rem;
+  }
 }
 
 .story__text {
@@ -42,9 +80,13 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
   margin-bottom: 0;
+  @include media-mobile {
+    -webkit-line-clamp: 8;
+  }
 }
 
 .story__link {
+  display: block;
   font-weight: bold;
 
   @extend %smooth-transition;
@@ -56,4 +98,12 @@
 .stories__button {
   padding-right: 4rem; // pixel-perfect
   margin: 0 auto;
+  @include media-tablet {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  @include media-mobile {
+    padding-left: 1.35rem;
+    padding-right: 1.35rem;
+  }
 }
