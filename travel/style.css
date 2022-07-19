@@ -1680,7 +1680,7 @@ img {
 .form__input:focus {
   outline: 3px solid #0d99ff;
 }
-.form__input:invalid {
+.form__input:invalid:focus {
   outline: 3px solid #eb8d8d;
 }
 

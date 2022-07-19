@@ -152,7 +152,7 @@
     outline: 3px solid #0d99ff;
   }
 
-  &:invalid {
+  &:invalid:focus {
     outline: 3px solid #eb8d8d;
   }
 }
