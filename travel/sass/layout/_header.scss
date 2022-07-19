@@ -61,11 +61,12 @@
   position: absolute;
   top: 0;
   right: 0;
-  transition: right 1s ease-in-out;
+  z-index: 1001;
+  @extend %smooth-transition;
 }
 
 .header__menu_hidden {
-  right: -166px;
+  transform: translateX(100%);
 }
 
 .header__navigation {

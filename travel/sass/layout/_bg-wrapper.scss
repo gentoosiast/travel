@@ -1,6 +1,8 @@
 .bg-wrapper {
   max-width: $page-width;
   margin: auto;
+  overflow: hidden;
+  position: relative;
   background: url('img/header-bg.jpg') top no-repeat,
     url('img/footer-bg.jpg') bottom no-repeat;
   @include media-mobile {

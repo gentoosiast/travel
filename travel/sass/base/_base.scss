@@ -9,6 +9,10 @@ body {
   font-weight: 500;
 }
 
+.body_noscroll {
+  overflow: hidden;
+}
+
 h1 {
   font-family: $secondary-font;
   font-size: 8rem;

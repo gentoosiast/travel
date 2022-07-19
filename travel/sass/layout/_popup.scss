@@ -1,0 +1,192 @@
+.popup {
+  visibility: visible;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 100%;
+  z-index: 1001;
+  max-width: 560px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 4.5rem;
+  border-radius: 16px;
+  background: linear-gradient(177.09deg, #ffffff 6.15%, #0d606f 202.69%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  @extend %smooth-transition;
+  transform: translate(-50%, 7.5%);
+  @include media-tablet {
+    max-width: 400px;
+    padding: 0 2rem;
+  }
+  @include media-mobile {
+    max-width: 90%;
+    padding: 0 1rem;
+  }
+  &_hidden {
+    visibility: hidden;
+    transform: translate(-50%, -100%);
+  }
+  &_notransition {
+    transition: none;
+  }
+}
+
+.popup__title {
+  margin: 2.5rem auto 3rem;
+  font-family: $secondary-font;
+  font-size: 3.2rem;
+  line-height: 3.8rem;
+  font-weight: 700;
+  color: $main-color;
+  @include media-tablet {
+    margin: 1rem auto 1.2rem;
+    font-size: 2rem;
+    line-height: 2.375rem;
+  }
+}
+
+.popup__sso {
+  width: 100%;
+  margin: 0 auto 3rem;
+  padding: 0;
+  list-style-type: none;
+
+  li {
+    margin-bottom: 2rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  @include media-tablet {
+    margin: 0 auto 1rem;
+    li {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+}
+
+.divider__line {
+  display: inline-block;
+  width: 100%;
+  height: 1px;
+  background-color: rgba($main-color, 0.5);
+}
+
+.divider__text {
+  display: inline-block;
+  margin: 0 9px;
+  font-family: $secondary-font;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  font-weight: 700;
+  color: rgba($main-color, 0.5);
+}
+
+.popup__form {
+  width: 100%;
+}
+
+.popup__form_signin {
+  margin: 0.9rem auto 1rem;
+  @include media-tablet {
+    margin: 0.5rem auto 0.8rem;
+  }
+}
+
+.popup__form_register {
+  margin: 0 auto 2.6rem;
+  @include media-tablet {
+    margin: 0 auto 0.8rem;
+  }
+}
+
+.form__label {
+  display: block;
+  width: 100%;
+  margin-bottom: 0.5rem;
+  font-family: $secondary-font;
+  line-height: 1.9rem;
+  font-weight: 400;
+  color: $main-color;
+  @include media-tablet {
+    font-size: 1.2rem;
+    line-height: 1.425rem;
+  }
+}
+
+.form__input {
+  width: calc(100% - 16px);
+  height: 5.4rem;
+  margin: 0 auto 2rem;
+  padding: 0 8px;
+  border: none;
+  border-radius: 10px;
+  font-size: 2rem;
+  line-height: 2.6rem;
+  box-shadow: inset 0 0 3px rgba(13, 96, 111, 0.08),
+    inset 0 2px 3px rgba(13, 96, 111, 0.16);
+  @include media-tablet {
+    height: 4rem;
+    margin: 0 auto 1rem;
+    font-size: 1.5rem;
+    line-height: 1.95rem;
+  }
+
+  &:last-of-type {
+    margin-bottom: 2.5rem;
+    @include media-tablet {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &:focus {
+    outline: 3px solid #0d99ff;
+  }
+
+  &:invalid {
+    outline: 3px solid #eb8d8d;
+  }
+}
+
+.popup__label {
+  font-family: $secondary-font;
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+  font-weight: 700;
+  color: rgba($main-color, 0.5);
+  @include media-tablet {
+    font-size: 1.2rem;
+    line-height: 1.44rem;
+  }
+}
+
+.popup__label_reset-password {
+  margin: 0 auto 2.6rem;
+  @include media-tablet {
+    margin: 0 auto 1rem;
+  }
+}
+
+.popup__label_signin,
+.popup__label_register {
+  margin: 2rem auto 2.3rem;
+  @include media-tablet {
+    margin: 0.8rem auto 0.8rem;
+  }
+}
+.popup__link {
+  color: $main-color;
+  @extend %smooth-transition;
+  &:hover {
+    color: mix(#ffffff, $main-color, 20%);
+  }
+}
