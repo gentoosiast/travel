@@ -1,23 +1,28 @@
 (function () {
   // BURGER MENU
   const burger = document.getElementById("burger");
-  const menu = document.getElementById("menu");
+  const menu = document.querySelector(".header__menu");
   const menuClose = document.querySelector(".menu__close");
-  const menuLinks = document.getElementsByClassName("menu__link");
+  const menuItems = document.querySelector(".menu__items");
   const fadeout = document.querySelector(".fadeout-container");
-  const menuTarget = document.querySelector(".menu__items");
 
   burger.addEventListener("click", showMenu);
   menuClose.addEventListener("click", hideMenu);
-  for (const link of menuLinks) {
-    link.addEventListener("click", hideMenu);
-  }
+  menuItems.addEventListener("click", handleMenuClick);
   fadeout.addEventListener("click", hideMenu);
 
-  function showMenu(event) {
-    // event.stopPropagation();
+  function showMenu() {
     menu.classList.remove("header__menu_hidden");
     fadeout.classList.add("fadeout-container_active");
+  }
+
+  function handleMenuClick(event) {
+    if (event.target.classList.contains("menu__link")) {
+      hideMenu();
+    }
+    if (event.target.classList.contains("menu__link_account")) {
+      showPopup();
+    }
   }
 
   function hideMenu() {
@@ -25,18 +30,17 @@
     fadeout.classList.remove("fadeout-container_active");
   }
 
-  // SIGN-IN/REGISTER POPUP
+  // SIGN-IN / REGISTER POPUP
   const headerButton = document.querySelector(".header__button");
-  const menuLink = document.querySelector(".menu__link_account");
-  const signinPopup = document.querySelector(".popup_signin");
-  const registerPopup = document.querySelector(".popup_register");
+  const popup = document.querySelector(".popup");
+  const signinPopup = document.querySelector(".popup__signin");
+  const registerPopup = document.querySelector(".popup__register");
   const signinForm = document.forms.signin;
   const registerForm = document.forms.register;
   const signinLink = document.querySelector(".popup__link_signin");
   const registerLink = document.querySelector(".popup__link_register");
 
   headerButton.addEventListener("click", showPopup);
-  menuLink.addEventListener("click", showPopup);
   signinForm.addEventListener("submit", submitForm);
   registerForm.addEventListener("submit", submitForm);
   signinLink.addEventListener("click", switchPopup);
@@ -45,15 +49,19 @@
 
   function showPopup() {
     document.body.classList.add("body_noscroll");
-    signinPopup.classList.remove("popup_hidden");
+    popup.classList.remove("popup_hidden");
     fadeout.classList.add("fadeout-container_active");
   }
 
   function closePopup() {
     document.body.classList.remove("body_noscroll");
-    signinPopup.classList.add("popup_hidden");
-    registerPopup.classList.add("popup_hidden");
+    popup.classList.add("popup_notransition");
+    popup.classList.add("popup_hidden");
+    signinPopup.classList.remove("popup__signin_hidden");
+    registerPopup.classList.add("popup__register_hidden");
     fadeout.classList.remove("fadeout-container_active");
+    popup.offsetHeight; // Trigger a reflow, flushing the CSS changes
+    popup.classList.remove("popup_notransition");
   }
 
   function submitForm(event) {
@@ -64,25 +72,8 @@
   }
 
   function switchPopup(event) {
-    // register -> signin
-    if (event.target === signinLink) {
-      registerPopup.classList.add("popup_notransition");
-      registerPopup.classList.add("popup_hidden");
-      signinPopup.classList.add("popup_notransition");
-      signinPopup.classList.remove("popup_hidden");
-      signinPopup.offsetHeight; // trigger reflow
-      signinPopup.classList.remove("popup_notransition");
-      registerPopup.classList.remove("popup_notransition");
-    } else {
-      // signin -> register
-      signinPopup.classList.add("popup_notransition");
-      signinPopup.classList.add("popup_hidden");
-      registerPopup.classList.add("popup_notransition");
-      registerPopup.classList.remove("popup_hidden");
-      signinPopup.offsetHeight; // trigger reflow
-      signinPopup.classList.remove("popup_notransition");
-      registerPopup.classList.remove("popup_notransition");
-    }
+    signinPopup.classList.toggle("popup__signin_hidden");
+    registerPopup.classList.toggle("popup__register_hidden");
   }
 
   // SLIDER
@@ -171,4 +162,11 @@
   function shiftRight() {
     switchSlide(curIdx + 1);
   }
+
+  // INITIALIZATION ON DOCUMENT LOAD
+  globalThis.onload = function () {
+    // prevent flicker on page load
+    menu.style.display = "block";
+    popup.style.display = "block";
+  };
 })();

@@ -33,7 +33,7 @@
           <div class="header__burger burger" id="burger">
             <span class="burger__line"></span>
           </div>
-          <div class="header__menu header__menu_hidden menu" id="menu">
+          <div class="header__menu header__menu_hidden menu">
             <button class="menu__close" type="button" aria-label="Close">
               <span class="menu__cross" aria-hidden="true"></span>
             </button>
@@ -375,110 +375,115 @@
       </footer>
     </div>
     <div class="fadeout-container"></div>
-    <div class="popup popup_signin popup_hidden">
-      <p class="popup__title">Log in to your account</p>
-      <ul class="popup__sso">
-        <li>
+    <div class="popup popup_hidden">
+      <div class="popup__signin">
+        <p class="popup__title">Log in to your account</p>
+        <ul class="popup__sso">
+          <li>
+            <button
+              class="popup__button form-button form-button_facebook"
+              type="button"
+            >
+              <span class="icon-facebook"></span>Sign In with Facebook
+            </button>
+          </li>
+          <li>
+            <button
+              class="popup__button form-button form-button_google"
+              type="button"
+            >
+              <span class="icon-google"></span>Sign In with Google
+            </button>
+          </li>
+        </ul>
+        <p class="popup__divider divider">
+          <span class="divider__line"></span
+          ><span class="divider__text">or</span
+          ><span class="divider__line"></span>
+        </p>
+        <form
+          class="popup__form popup__form_signin form"
+          name="signin"
+          action="javascript:;"
+          method="POST"
+        >
+          <label class="form__label" for="signin-email">E-mail</label>
+          <input
+            class="form__input"
+            id="signin-email"
+            name="email"
+            type="email"
+            required
+          />
+          <label class="form__label" for="signin-password">Password</label>
+          <input
+            class="form__input"
+            id="signin-password"
+            name="password"
+            type="password"
+            required
+          />
           <button
-            class="popup__button form-button form-button_facebook"
-            type="button"
+            class="form__button form-button form-button_submit"
+            type="submit"
           >
-            <span class="icon-facebook"></span>Sign In with Facebook
+            Sign In
           </button>
-        </li>
-        <li>
+        </form>
+        <p class="popup__label popup__label_reset-password">
+          <a class="popup__link" href="javascript:;">Forgot Your Password</a>
+        </p>
+        <p class="popup__divider divider">
+          <span class="divider__line"></span>
+        </p>
+        <p class="popup__label popup__label_register">
+          Don't have an account?
+          <a class="popup__link popup__link_register" href="javascript:;"
+            >Register</a
+          >
+        </p>
+      </div>
+      <div class="popup__register popup__register_hidden">
+        <p class="popup__title">Create account</p>
+        <form
+          class="popup__form popup__form_register"
+          name="register"
+          action="javascript:;"
+          method="POST"
+        >
+          <label class="form__label" for="register-email">E-mail</label>
+          <input
+            class="form__input"
+            id="register-email"
+            name="email"
+            type="email"
+            required
+          />
+          <label class="form__label" for="register-password">Password</label>
+          <input
+            class="form__input"
+            id="register-password"
+            name="password"
+            type="password"
+            required
+          />
           <button
-            class="popup__button form-button form-button_google"
-            type="button"
+            class="form__button form-button form-button_submit"
+            type="submit"
           >
-            <span class="icon-google"></span>Sign In with Google
+            Sign Up
           </button>
-        </li>
-      </ul>
-      <p class="popup__divider divider">
-        <span class="divider__line"></span><span class="divider__text">or</span
-        ><span class="divider__line"></span>
-      </p>
-      <form
-        class="popup__form popup__form_signin form"
-        name="signin"
-        action="javascript:;"
-        method="POST"
-      >
-        <label class="form__label" for="signin-email">E-mail</label>
-        <input
-          class="form__input"
-          id="signin-email"
-          name="email"
-          type="email"
-          required
-        />
-        <label class="form__label" for="signin-password">Password</label>
-        <input
-          class="form__input"
-          id="signin-password"
-          name="password"
-          type="password"
-          required
-        />
-        <button
-          class="form__button form-button form-button_submit"
-          type="submit"
-        >
-          Sign In
-        </button>
-      </form>
-      <p class="popup__label popup__label_reset-password">
-        <a class="popup__link" href="javascript:;">Forgot Your Password</a>
-      </p>
-      <p class="popup__divider divider">
-        <span class="divider__line"></span>
-      </p>
-      <p class="popup__label popup__label_register">
-        Don't have an account?
-        <a class="popup__link popup__link_register" href="javascript:;"
-          >Register</a
-        >
-      </p>
-    </div>
-    <div class="popup popup_register popup_hidden">
-      <p class="popup__title">Create account</p>
-      <form
-        class="popup__form popup__form_register"
-        name="register"
-        action="javascript:;"
-        method="POST"
-      >
-        <label class="form__label" for="register-email">E-mail</label>
-        <input
-          class="form__input"
-          id="register-email"
-          name="email"
-          type="email"
-          required
-        />
-        <label class="form__label" for="register-password">Password</label>
-        <input
-          class="form__input"
-          id="register-password"
-          name="password"
-          type="password"
-          required
-        />
-        <button
-          class="form__button form-button form-button_submit"
-          type="submit"
-        >
-          Sign Up
-        </button>
-      </form>
-      <p class="popup__divider divider">
-        <span class="divider__line"></span>
-      </p>
-      <p class="popup__label popup__label_signin">
-        Already have an account?
-        <a class="popup__link popup__link_signin" href="javascript:;">Log in</a>
-      </p>
+        </form>
+        <p class="popup__divider divider">
+          <span class="divider__line"></span>
+        </p>
+        <p class="popup__label popup__label_signin">
+          Already have an account?
+          <a class="popup__link popup__link_signin" href="javascript:;"
+            >Log in</a
+          >
+        </p>
+      </div>
     </div>
     <script src="selfcheck.js"></script>
     <script src="app.js"></script>

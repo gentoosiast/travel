@@ -862,6 +862,7 @@ img {
 }
 
 .header__menu {
+  display: none;
   position: absolute;
   top: 0;
   right: 0;
@@ -1529,6 +1530,7 @@ img {
 }
 
 .popup {
+  display: none;
   visibility: visible;
   position: absolute;
   top: 0;
@@ -1536,14 +1538,10 @@ img {
   width: 100%;
   z-index: 1001;
   max-width: 560px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   padding: 0 4.5rem;
   border-radius: 16px;
   background: linear-gradient(177.09deg, #ffffff 6.15%, #0d606f 202.69%);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   transform: translate(-50%, 7.5%);
 }
 @media (max-width: 768px) {
@@ -1564,6 +1562,18 @@ img {
 }
 .popup_notransition {
   transition: none;
+}
+
+.popup__signin,
+.popup__register {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.popup__signin_hidden,
+.popup__register_hidden {
+  display: none;
 }
 
 .popup__title {

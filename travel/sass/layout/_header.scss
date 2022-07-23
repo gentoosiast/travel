@@ -58,6 +58,7 @@
 }
 
 .header__menu {
+  display: none; // Re-enabled via JS after page load
   position: absolute;
   top: 0;
   right: 0;
