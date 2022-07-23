@@ -102,6 +102,7 @@
     slider.classList.remove("carousel__slides_transition");
     shiftValue = getShiftValue();
     setSliderPosition(curIdx);
+    slider.offsetHeight; // Trigger a reflow, flushing the CSS changes
     slider.classList.add("carousel__slides_transition");
   }
 
