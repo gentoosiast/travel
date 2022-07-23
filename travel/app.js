@@ -53,15 +53,17 @@
     fadeout.classList.add("fadeout-container_active");
   }
 
-  function closePopup() {
-    document.body.classList.remove("body_noscroll");
-    popup.classList.add("popup_notransition");
-    popup.classList.add("popup_hidden");
+  function restorePopupSettings() {
     signinPopup.classList.remove("popup__signin_hidden");
     registerPopup.classList.add("popup__register_hidden");
+    popup.removeEventListener("transitionend", restorePopupSettings);
+  }
+
+  function closePopup() {
+    document.body.classList.remove("body_noscroll");
+    popup.classList.add("popup_hidden");
     fadeout.classList.remove("fadeout-container_active");
-    popup.offsetHeight; // Trigger a reflow, flushing the CSS changes
-    popup.classList.remove("popup_notransition");
+    popup.addEventListener("transitionend", restorePopupSettings);
   }
 
   function submitForm(event) {
@@ -71,7 +73,7 @@
     closePopup();
   }
 
-  function switchPopup(event) {
+  function switchPopup() {
     signinPopup.classList.toggle("popup__signin_hidden");
     registerPopup.classList.toggle("popup__register_hidden");
   }
