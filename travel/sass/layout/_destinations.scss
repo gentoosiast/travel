@@ -14,10 +14,14 @@
 
 .carousel {
   position: relative;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   overflow: hidden;
+  @include media-mobile {
+    max-width: 92.31%;
+  }
 }
 
 .carousel__arrow {
@@ -61,21 +65,28 @@
   display: flex;
   justify-content: center;
   gap: 6rem;
+  transform: translateX(0%);
+  &_transition {
+    transition: transform 0.5s ease-in-out;
+  }
   @include media-mobile {
-    width: 350%;
+    // width: 350%;
     // manual switch of current slide
     // (temporary hack to achieve perfect similarity with mockup)
-    transform: translateX(calc(6rem + 92vw));
+    width: 300%;
+    gap: 0;
   }
 }
 
 .carousel__slide {
   position: relative;
-  @extend %smooth-transition;
+  @include media-mobile {
+    flex-shrink: 0;
+  }
   img {
     width: 100%;
     @include media-mobile {
-      width: 92vw;
+      width: 92.31vw;
     }
     border-radius: 16px;
   }

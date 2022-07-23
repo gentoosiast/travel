@@ -309,7 +309,7 @@ template {
 }
 
 /* stylelint-enable */
-.popup__link, .popup, .social__item, .footer__rsslogo, .story__link, .carousel__slide, .carousel__arrow, .preview__input, .navigation__link, .header__menu, .header__burger, .header__logo, .form-button, .circle-button, .button, .menu__items a, .menu__cross {
+.popup__link, .popup, .social__item, .footer__rsslogo, .story__link, .carousel__arrow, .preview__input, .navigation__link, .header__menu, .header__burger, .header__logo, .form-button, .circle-button, .button, .menu__items a, .menu__cross {
   transition: all 0.3s ease-in;
 }
 
@@ -1182,10 +1182,16 @@ img {
 
 .carousel {
   position: relative;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   overflow: hidden;
+}
+@media (max-width: 391px) {
+  .carousel {
+    max-width: 92.31%;
+  }
 }
 
 .carousel__arrow {
@@ -1230,16 +1236,25 @@ img {
   display: flex;
   justify-content: center;
   gap: 6rem;
+  transform: translateX(0%);
+}
+.carousel__slides_transition {
+  transition: transform 0.5s ease-in-out;
 }
 @media (max-width: 391px) {
   .carousel__slides {
-    width: 350%;
-    transform: translateX(calc(6rem + 92vw));
+    width: 300%;
+    gap: 0;
   }
 }
 
 .carousel__slide {
   position: relative;
+}
+@media (max-width: 391px) {
+  .carousel__slide {
+    flex-shrink: 0;
+  }
 }
 .carousel__slide img {
   width: 100%;
@@ -1247,7 +1262,7 @@ img {
 }
 @media (max-width: 391px) {
   .carousel__slide img {
-    width: 92vw;
+    width: 92.31vw;
   }
 }
 .carousel__slide:not(.slide_active):hover {
