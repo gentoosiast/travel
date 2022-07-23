@@ -125,6 +125,7 @@
   line-height: 1.9rem;
   font-weight: 400;
   color: $main-color;
+  text-shadow: 0 2px 3px rgba(255, 255, 255, 0.16);
   @include media-tablet {
     font-size: 1.2rem;
     line-height: 1.425rem;
@@ -191,6 +192,14 @@
     margin: 0.8rem auto 0.8rem;
   }
 }
+
+.popup__label_signin {
+  padding-left: 8px; // pixel-perfect
+  @include media-tablet {
+    padding-left: 0;
+  }
+}
+
 .popup__link {
   color: $main-color;
   @extend %smooth-transition;
