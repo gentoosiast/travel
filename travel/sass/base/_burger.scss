@@ -13,18 +13,24 @@
   width: 35px;
   height: 32px;
   cursor: pointer;
-  .burger__line {
+
+  &__line {
     @extend %burger-line;
+
     top: calc(50% - 4px);
     left: 4.38px;
   }
+
   &::before {
     @extend %burger-line;
+
     top: 6px;
     left: 4.38px;
   }
+
   &::after {
     @extend %burger-line;
+
     bottom: 11px;
     left: 4.38px;
   }

@@ -1,20 +1,3 @@
-.fadeout-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 1000;
-  background-color: rgba(0, 0, 0, 0);
-  transition: background-color 1s ease-in-out;
-  pointer-events: none;
-}
-
-.fadeout-container_active {
-  background-color: rgba(0, 0, 0, 0.3);
-  pointer-events: all;
-}
-
 .menu__close {
   position: absolute;
   top: 14px;
@@ -30,6 +13,7 @@
   width: 18px;
   height: 18px;
   @extend %smooth-transition;
+
   &::before,
   &::after {
     position: absolute;
@@ -37,14 +21,17 @@
     height: 18px;
     width: 2px;
     border-radius: 2px;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255 255 255 / 70%);
   }
+
   &::before {
     transform: rotate(45deg);
   }
+
   &::after {
     transform: rotate(-45deg);
   }
+
   &:hover {
     filter: brightness(85%);
   }
@@ -59,16 +46,20 @@
   font-size: 1.6rem;
   line-height: 2.12rem;
   background-color: $secondary-color;
+
   li {
     padding-bottom: 1rem;
+
     &:last-child {
       padding-bottom: 0;
     }
   }
+
   a {
     color: $light-color;
     text-decoration: none;
     @extend %smooth-transition;
+
     &:hover {
       filter: brightness(85%);
     }

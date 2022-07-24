@@ -1,8 +1,8 @@
 .header {
   background-color: rgba($secondary-color, 0.7);
-  box-shadow: 0 4px 4px rgba(13, 96, 111, 0.5);
+  box-shadow: 0 4px 4px rgba(13 96 111 / 50%);
   @include media-mobile {
-    background: linear-gradient(180deg, #0d606f 0%, rgba(13, 96, 111, 0) 65.1%);
+    background: linear-gradient(180deg, #0d606f 0%, rgba(13 96 111 / 0%) 65.1%);
     box-shadow: none;
   }
 }
@@ -20,6 +20,7 @@
 
 .header__logo {
   @extend %smooth-transition;
+
   &:hover {
     filter: brightness(85%);
   }

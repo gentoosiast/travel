@@ -9,8 +9,10 @@
     margin-left: 10px;
     margin-right: 10px;
   }
+
   padding-left: 0; // redefine user-agent style
   list-style-type: none;
+
   li {
     margin-bottom: 10px;
   }
@@ -24,6 +26,7 @@
   text-decoration: none;
   color: $light-color;
   @extend %smooth-transition;
+
   &:hover {
     border-bottom: 2px solid $light-color;
   }

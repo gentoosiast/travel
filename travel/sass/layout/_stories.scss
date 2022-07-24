@@ -1,3 +1,5 @@
+@use 'sass:color';
+
 .stories {
   padding-bottom: 4.17rem;
   background: rgba($light-color, 0.7);
@@ -75,6 +77,8 @@
 }
 
 .story__text {
+  // In 2022 line-clamping feature only works with vendor prefix
+  // stylelint-disable value-no-vendor-prefix
   display: -webkit-box;
   -webkit-line-clamp: 6;
   -webkit-box-orient: vertical;
@@ -83,15 +87,16 @@
   @include media-mobile {
     -webkit-line-clamp: 8;
   }
+  // stylelint-enable value-no-vendor-prefix
 }
 
 .story__link {
   display: block;
   font-weight: bold;
-
   @extend %smooth-transition;
+
   &:hover {
-    color: mix(#ffffff, $main-color, 30%);
+    color: color.mix(#fff, $main-color, 30%);
   }
 }
 

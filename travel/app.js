@@ -48,7 +48,7 @@
   fadeout.addEventListener("click", closePopup);
 
   function showPopup() {
-    document.body.classList.add("body_noscroll");
+    document.body.classList.add("body-noscroll");
     popup.classList.remove("popup_hidden");
     fadeout.classList.add("fadeout-container_active");
   }
@@ -60,7 +60,7 @@
   }
 
   function closePopup() {
-    document.body.classList.remove("body_noscroll");
+    document.body.classList.remove("body-noscroll");
     popup.classList.add("popup_hidden");
     fadeout.classList.remove("fadeout-container_active");
     popup.addEventListener("transitionend", restorePopupSettings);

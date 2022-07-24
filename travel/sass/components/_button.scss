@@ -1,3 +1,5 @@
+@use 'sass:color';
+
 .button {
   border: none;
   border-radius: 10px;
@@ -5,16 +7,17 @@
   font-weight: inherit;
   color: $light-color;
   background-color: $main-color;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25), 0 2px 3px rgba(13, 96, 111, 0.16);
+  box-shadow: 0 4px 4px rgba(0 0 0 / 25%), 0 2px 3px rgba(13 96 111 / 16%);
   cursor: pointer;
   @extend %smooth-transition;
   @include media-mobile {
-    box-shadow: 0 0 3px rgba(13, 96, 111, 0.08),
-      0 2px 3px rgba(13, 96, 111, 0.16);
+    box-shadow: 0 0 3px rgba(13 96 111 / 8%), 0 2px 3px rgba(13 96 111 / 16%);
   }
+
   &:hover {
-    background-color: mix(#ffffff, $main-color, 20%);
+    background-color: color.mix(#fff, $main-color, 20%);
   }
+
   &:active {
     transform: translateX(1px) translateY(1px);
   }
@@ -57,6 +60,7 @@
     font-size: 1.1rem;
     line-height: 1.5rem;
   }
+
   .icon-arrow {
     padding-right: 1.25rem;
     @include media-tablet {
@@ -102,7 +106,7 @@
   border-radius: 10px;
   font-size: 2rem;
   line-height: 2.6rem;
-  box-shadow: 0 0 3px rgba(13, 96, 111, 0.08), 0 2px 3px rgba(13, 96, 111, 0.16);
+  box-shadow: 0 0 3px rgba(13 96 111 / 8%), 0 2px 3px rgba(13 96 111 / 16%);
   @extend %smooth-transition;
   @include media-tablet {
     height: 4rem;
@@ -117,8 +121,9 @@
   &_facebook {
     color: $light-color;
     background-color: #1877f2;
+
     &:hover {
-      background-color: mix(#ffffff, #1877f2, 20%);
+      background-color: color.mix(#fff, #1877f2, 20%);
     }
 
     .icon-facebook {
@@ -129,8 +134,9 @@
   &_google {
     color: $main-color;
     background-color: $light-color;
+
     &:hover {
-      background-color: mix(#aaaaaa, $light-color, 20%);
+      background-color: color.mix(#aaa, $light-color, 20%);
     }
 
     .icon-google {
@@ -142,8 +148,9 @@
     height: 5.4rem;
     color: $light-color;
     background-color: $main-color;
+
     &:hover {
-      background-color: mix(#ffffff, $main-color, 20%);
+      background-color: color.mix(#fff, $main-color, 20%);
     }
   }
 }

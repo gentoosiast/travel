@@ -324,7 +324,7 @@ body {
   font-weight: 500;
 }
 
-.body_noscroll {
+.body-noscroll {
   overflow: hidden;
 }
 
@@ -333,7 +333,7 @@ h1 {
   font-size: 8rem;
   line-height: 9.6rem;
   font-weight: 700;
-  color: #ffffff;
+  color: #fff;
 }
 
 h2 {
@@ -364,14 +364,14 @@ img {
   block-size: auto;
 }
 
-.burger::after, .burger::before, .burger .burger__line {
+.burger::after, .burger::before, .burger__line {
   content: "";
   position: absolute;
   display: block;
   width: 26.25px;
   height: 2.8px;
   border-radius: 2px;
-  background-color: #ffffff;
+  background-color: #fff;
 }
 
 .burger {
@@ -380,7 +380,7 @@ img {
   height: 32px;
   cursor: pointer;
 }
-.burger .burger__line {
+.burger__line {
   top: calc(50% - 4px);
   left: 4.38px;
 }
@@ -460,7 +460,7 @@ img {
   padding-bottom: 0;
 }
 .menu__items a {
-  color: #ffffff;
+  color: #fff;
   text-decoration: none;
 }
 .menu__items a:hover {
@@ -472,7 +472,7 @@ img {
   border-radius: 10px;
   font-family: inherit;
   font-weight: inherit;
-  color: #ffffff;
+  color: #fff;
   background-color: #0d606f;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25), 0 2px 3px rgba(13, 96, 111, 0.16);
   cursor: pointer;
@@ -595,7 +595,7 @@ img {
   transform: translateX(1px) translateY(1px);
 }
 .form-button_facebook {
-  color: #ffffff;
+  color: #fff;
   background-color: #1877f2;
 }
 .form-button_facebook:hover {
@@ -606,7 +606,7 @@ img {
 }
 .form-button_google {
   color: #0d606f;
-  background-color: #ffffff;
+  background-color: #fff;
 }
 .form-button_google:hover {
   background-color: #eeeeee;
@@ -616,7 +616,7 @@ img {
 }
 .form-button_submit {
   height: 5.4rem;
-  color: #ffffff;
+  color: #fff;
   background-color: #0d606f;
 }
 .form-button_submit:hover {
@@ -840,7 +840,7 @@ img {
   font-weight: 600;
   font-size: 3.2rem;
   line-height: 3.89rem;
-  color: #ffffff;
+  color: #fff;
 }
 @media (max-width: 391px) {
   .logo__text {
@@ -911,10 +911,10 @@ img {
   font-size: 1.6rem;
   line-height: 2.1rem;
   text-decoration: none;
-  color: #ffffff;
+  color: #fff;
 }
 .navigation__link:hover {
-  border-bottom: 2px solid #ffffff;
+  border-bottom: 2px solid #fff;
 }
 
 .navigation > li:last-child > .navigation__link {
@@ -972,7 +972,7 @@ img {
   line-height: 2.4rem;
   font-weight: 700;
   font-style: italic;
-  color: #ffffff;
+  color: #fff;
 }
 @media (max-width: 391px) {
   .preview__text {
@@ -1073,34 +1073,25 @@ img {
   }
 }
 
-.cards > .card:nth-child(2) {
-  position: relative;
-  left: 34px;
-}
-@media (max-width: 920px) {
-  .cards > .card:nth-child(2) {
-    position: inherit;
-  }
-}
-@media (max-width: 391px) {
-  .cards > .card:nth-child(2) {
-    position: inherit;
-  }
-}
-
 .card {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
 }
+.card:nth-child(2) {
+  position: relative;
+  left: 34px;
+}
+@media (max-width: 920px) {
+  .card:nth-child(2) {
+    position: inherit;
+  }
+}
 @media (max-width: 391px) {
   .card {
     flex: 1;
   }
-}
-
-@media (max-width: 391px) {
   .card:first-child {
     align-items: flex-start;
   }
@@ -1108,9 +1099,6 @@ img {
     max-width: 9.5rem;
     text-align: left;
   }
-}
-
-@media (max-width: 391px) {
   .card:last-child {
     align-items: flex-end;
   }
@@ -1304,7 +1292,7 @@ img {
   font-size: 3.2rem;
   line-height: 4.23rem;
   text-transform: uppercase;
-  color: #ffffff;
+  color: #fff;
 }
 @media (max-width: 391px) {
   .slide__text {
@@ -1489,7 +1477,7 @@ img {
   display: flex;
   justify-content: center;
   margin: 0;
-  color: #ffffff;
+  color: #fff;
 }
 @media (max-width: 391px) {
   .footer__copyright {
@@ -1541,7 +1529,7 @@ img {
   max-width: 560px;
   padding: 0 4.5rem;
   border-radius: 16px;
-  background: linear-gradient(177.09deg, #ffffff 6.15%, #0d606f 202.69%);
+  background: linear-gradient(177.09deg, #fff 6.15%, #0d606f 202.69%);
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   transform: translate(-50%, 7.5%);
 }
@@ -1741,7 +1729,7 @@ img {
 @media (max-width: 768px) {
   .popup__label_signin,
 .popup__label_register {
-    margin: 0.8rem auto 0.8rem;
+    margin: 0.8rem auto;
   }
 }
 

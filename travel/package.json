@@ -14,8 +14,9 @@
     "linthtml-config-htmlacademy": "^1.0.3",
     "prettier": "2.7.1",
     "stylelint": "^14.9.1",
-    "stylelint-config-htmlacademy": "^0.1.12",
-    "stylelint-config-standard": "^26.0.0"
+    "stylelint-config-prettier-scss": "^0.0.1",
+    "stylelint-config-standard": "^26.0.0",
+    "stylelint-config-standard-scss": "^5.0.0"
   },
   "dependencies": {
     "normalize.css": "^8.0.1"
