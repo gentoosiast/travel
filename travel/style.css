@@ -1558,9 +1558,6 @@ img {
   top: 0%;
   transform: translate(-50%, -100%);
 }
-.popup_notransition {
-  transition: none;
-}
 
 .popup__signin,
 .popup__register {
