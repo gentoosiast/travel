@@ -72,6 +72,10 @@
 }
 
 .header__navigation {
+  margin-right: 3rem; // pixel-perfect
+  @include media-tablet {
+    margin-right: 0;
+  }
   @include media-mobile {
     display: none;
   }

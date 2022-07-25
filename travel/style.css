@@ -874,6 +874,14 @@ img {
   transform: translateX(100%);
 }
 
+.header__navigation {
+  margin-right: 3rem;
+}
+@media (max-width: 768px) {
+  .header__navigation {
+    margin-right: 0;
+  }
+}
 @media (max-width: 391px) {
   .header__navigation {
     display: none;
@@ -1522,7 +1530,7 @@ img {
   display: none;
   visibility: visible;
   position: absolute;
-  top: 0;
+  top: 50%;
   left: 50%;
   width: 100%;
   z-index: 1001;
@@ -1531,7 +1539,7 @@ img {
   border-radius: 16px;
   background: linear-gradient(177.09deg, #fff 6.15%, #0d606f 202.69%);
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-  transform: translate(-50%, 7.5%);
+  transform: translate(-50%, -50%);
 }
 @media (max-width: 768px) {
   .popup {
@@ -1547,6 +1555,7 @@ img {
 }
 .popup_hidden {
   visibility: hidden;
+  top: 0%;
   transform: translate(-50%, -100%);
 }
 .popup_notransition {
