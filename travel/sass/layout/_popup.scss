@@ -4,7 +4,7 @@
   display: none; // re-enabled via JS after page load
   visibility: visible;
   position: absolute;
-  top: 0;
+  top: 50%;
   left: 50%;
   width: 100%;
   z-index: 1001;
@@ -13,9 +13,9 @@
   border-radius: 16px;
   background: linear-gradient(177.09deg, #fff 6.15%, #0d606f 202.69%);
   box-shadow: 0 4px 4px rgba(0 0 0 / 25%);
+  transform: translate(-50%, -50%);
   @extend %smooth-transition;
 
-  transform: translate(-50%, 7.5%);
   @include media-tablet {
     max-width: 400px;
     padding: 0 2rem;
@@ -27,6 +27,7 @@
 
   &_hidden {
     visibility: hidden;
+    top: 0%;
     transform: translate(-50%, -100%);
   }
 
