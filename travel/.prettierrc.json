@@ -5,6 +5,13 @@
       "options": {
         "singleQuote": true
       }
+    },
+    {
+      "files": "**/*.js",
+      "options": {
+        "singleQuote": true,
+        "trailingComma": "all"
+      }
     }
   ]
 }
