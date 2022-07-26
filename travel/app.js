@@ -13,22 +13,17 @@
   const registerLink = document.querySelector('.popup__link_register');
 
   function showPopup() {
+    signinPopup.classList.remove('popup__signin_hidden');
+    registerPopup.classList.add('popup__register_hidden');
     document.body.classList.add('body-noscroll');
     popup.classList.remove('popup_hidden');
     fadeout.classList.add('fadeout-container_active');
-  }
-
-  function restorePopupSettings() {
-    signinPopup.classList.remove('popup__signin_hidden');
-    registerPopup.classList.add('popup__register_hidden');
-    popup.removeEventListener('transitionend', restorePopupSettings);
   }
 
   function closePopup() {
     document.body.classList.remove('body-noscroll');
     popup.classList.add('popup_hidden');
     fadeout.classList.remove('fadeout-container_active');
-    popup.addEventListener('transitionend', restorePopupSettings);
   }
 
   function submitForm(event) {
