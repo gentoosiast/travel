@@ -1,8 +1,0 @@
-{
-  "extends": "linthtml-config-htmlacademy",
-  "rules": {
-    "attr-validate": false,
-    "tag-close": false,
-    "tag-name-match": false
-  }
-}
